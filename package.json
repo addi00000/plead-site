@@ -2,15 +2,15 @@
 	"name": "plead-site",
 	"version": "0.0.1",
 	"private": true,
-	"engines": {    
-        "node": "16.x",
-        "npm": "8.x"
-    },
+	"engines": {
+		"node": "16.x",
+		"npm": "8.x"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"start": "node build/index.js",
+		"start": "vite --port $PORT",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -38,6 +38,7 @@
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.2.1",
 		"@fortawesome/free-solid-svg-icons": "^6.2.1",
+		"@heroku/buildpack-registry": "^1.0.1",
 		"svelte-fa": "^3.0.3"
 	}
 }

@@ -1,0 +1,239 @@
+{
+	"clownboard": {
+		"cbemoji": {
+			"description": "Sets the emoji that triggers the Clownboard messages",
+			"usage": "<emoji>",
+			"aliases": []
+		},
+		"cblock": {
+			"description": "Stops the Clownboard from posting",
+			"usage": "[on/off]",
+			"aliases": []
+		},
+		"cbset": {
+			"description": "Sets up the Clownboard",
+			"usage": "<channel>",
+			"aliases": []
+		},
+		"cbthreshold": {
+			"description": "Sets the threshold for the Clownboard",
+			"usage": "<number > 0>",
+			"aliases": []
+		},
+		"cbreset": {
+			"description": "Resets the Clownboard",
+			"usage": "",
+			"aliases": []
+		}
+	},
+	"dev": {
+		"kill": {
+			"description": "kills the bot",
+			"usage": "",
+			"aliases": ["kys"]
+		},
+		"reload": {
+			"description": "reloads the bot",
+			"usage": "[command | alias]",
+			"aliases": ["r"]
+		}
+	},
+	"fun": {
+		"8ball": {
+			"description": "Ask the magic 8ball a question",
+			"usage": "<question>",
+			"aliases": ["8b"]
+		},
+		"cat": {
+			"description": "Sends a random cat image",
+			"usage": "",
+			"aliases": []
+		},
+		"coinflip": {
+			"description": "Flip a coin",
+			"usage": "",
+			"aliases": ["cf"]
+		},
+		"dice": {
+			"description": "Roll a dice",
+			"usage": "[number of dice]",
+			"aliases": []
+		},
+		"rps": {
+			"description": "Play rock paper scissors",
+			"usage": "<rock/paper/scissors>",
+			"aliases": []
+		},
+		"waifu": {
+			"description": "Sends a random waifu image",
+			"usage": "[sfw/nsfw] [category]",
+			"aliases": []
+		}
+	},
+	"info": {
+		"avatar": {
+			"description": "Gets the avatar of a user",
+			"usage": "[user]",
+			"aliases": ["av"]
+		},
+		"banner": {
+			"description": "Gets the banner of a user",
+			"usage": "[user]",
+			"aliases": ["bn"]
+		},
+		"bots": {
+			"description": "Gets a list of all bots in the server",
+			"usage": "",
+			"aliases": []
+		},
+		"emotes": {
+			"description": "Gets a list of all emojis in the server",
+			"usage": "",
+			"aliases": ["emojis"]
+		},
+		"gnames": {
+			"description": "View guild name changes",
+			"usage": "",
+			"aliases": ["snames"]
+		},
+		"google": {
+			"description": "Search google",
+			"usage": "<search query>",
+			"aliases": []
+		},
+		"guilds": {
+			"description": "Send all guilds the bot is in",
+			"usage": "",
+			"aliases": ["servers"]
+		},
+		"help": {
+			"description": "Returns all commands, or one specific command's info",
+			"usage": "[command | alias]",
+			"aliases": ["h"]
+		},
+		"info": {
+			"description": "Get the bot's information",
+			"usage": "",
+			"aliases": ["i"]
+		},
+		"membercount": {
+			"description": "View the server member count",
+			"usage": "",
+			"aliases": []
+		},
+		"namemc": {
+			"description": "Return namemc profile",
+			"usage": "<username>",
+			"aliases": []
+		},
+		"names": {
+			"description": "View username and nickname history",
+			"usage": "<user>",
+			"aliases": ["nicks"]
+		},
+		"roles": {
+			"description": "Gets a list of all roles in the server",
+			"usage": "",
+			"aliases": []
+		},
+		"serverinfo": {
+			"description": "get general info on the guild",
+			"usage": "[guild id]",
+			"aliases": ["si", "guildinfo", "gi"]
+		},
+		"urbandictionary": {
+			"description": "Gets the definition of word from Urban Dictionary",
+			"usage": "<word>",
+			"aliases": ["ud"]
+		},
+		"user": {
+			"description": "Gets information about a user",
+			"usage": "[user]",
+			"aliases": ["u"]
+		},
+		"youtube": {
+			"description": "Search YouTube for video results",
+			"usage": "<search query>",
+			"aliases": ["yt"]
+		}
+	},
+	"misc": {
+		"addemote": {
+			"description": "Grab emote(s) from another server and upload it to the current server",
+			"usage": "<emote> [emote] [emote]...",
+			"aliases": ["ae"]
+		},
+		"base64": {
+			"description": "Encodes or decodes text to base64",
+			"usage": "<encode/decode> <text>",
+			"aliases": ["b64"]
+		},
+		"editsnipe": {
+			"description": "Gets the last edited message in the guild or channel",
+			"usage": "[channel]",
+			"aliases": ["esn"]
+		},
+		"ocr": {
+			"description": "Reads text from an image",
+			"usage": "<image>",
+			"aliases": []
+		},
+		"say": {
+			"description": "Impersonate a user",
+			"usage": "<user> <message>",
+			"aliases": ["s"]
+		},
+		"snipe": {
+			"description": "Gets the last deleted message in the guild or channel",
+			"usage": "[channel]",
+			"aliases": ["sn"]
+		},
+		"tts": {
+			"description": "Converts text to speech",
+			"usage": "<text>",
+			"aliases": []
+		}
+	},
+	"mod": {
+		"ban": {
+			"description": "Bans a user",
+			"usage": "<user> [reason]",
+			"aliases": []
+		},
+		"clear": {
+			"description": "Clears messages",
+			"usage": "<amount>",
+			"aliases": ["purge"]
+		},
+		"kick": {
+			"description": "Kicks a user",
+			"usage": "<user> [reason]",
+			"aliases": []
+		},
+		"lockdown": {
+			"description": "Locks down a channel",
+			"usage": "<on/off>",
+			"aliases": ["ld"]
+		},
+		"mute": {
+			"description": "Times out a user",
+			"usage": "<user>",
+			"aliases": []
+		},
+		"nuke": {
+			"description": "Nukes a channel",
+			"usage": "",
+			"aliases": []
+		},
+		"unban": {
+			"description": "Unbans a user",
+			"usage": "<user>",
+			"aliases": []
+		},
+		"unmute": {
+			"description": "Unmutes a user",
+			"usage": "<user>",
+			"aliases": []
+		}
+	}
+}

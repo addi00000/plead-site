@@ -64,8 +64,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
+		
 		margin: 5rem 0;
+
+		@media screen and (max-width: 800px) {
+			margin: 2rem 0.75rem;
+		}
 
 		h1 {
 			font-size: 2rem;
@@ -149,6 +153,30 @@
 							font-size: 1.05rem;
 							font-weight: 400;
 							text-transform: lowercase;
+
+							@media screen and (max-width: 600px) {
+								display: none;
+							}
+						}
+					}
+				}
+			}	
+
+			@media screen and (max-width: 600px) {
+				.category {
+					h2 {
+						font-size: 1.5rem;
+					}
+
+					.commands {
+						.command {
+							h3 {
+								font-size: 1rem;
+							}
+
+							h4 {
+								display: none;
+							}
 						}
 					}
 				}
@@ -187,14 +215,16 @@
 				animation: fade-in-foward 1s ease forwards 0.25s;
 				
 				cursor: pointer;
-				transition: transform 0.2s ease;
+				transition: transform 0.2s ease, filter 0.2s ease;
 
 				&:hover {
 					transform: scale(1.1);
+					filter: brightness(2);
 				}
 
 				&:active {
 					transform: scale(0.9) translateY(0.1rem);
+					filter: brightness(1.5);
 				}
 
 				.icon {
@@ -204,6 +234,10 @@
 						transform: scale(1.1);
 					}
 				}
+			}
+
+			@media screen and (max-width: 800px) {
+				display: none;
 			}
 		}
 	}

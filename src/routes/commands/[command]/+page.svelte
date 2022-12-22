@@ -39,7 +39,7 @@
 			font-size: 1.25rem;
 			font-weight: 400;
 			margin-bottom: 0.5rem;
-
+			text-align: center;
 			border-bottom: 1px solid var(--color-border-hover);
 
 			&:nth-child(2) {

@@ -65,5 +65,15 @@
 				color: var(--color-heading);
 			}
 		}
+
+		@media screen and (max-width: 768px) {
+			.navbar-routes {
+				gap: 24px;
+
+				.navbar-link {
+					font-size: 1rem;
+				}
+			}
+		}
 	}
 </style>

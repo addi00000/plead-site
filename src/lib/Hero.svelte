@@ -183,6 +183,22 @@
 				}
 			}
 		}
+
+		@media screen and (max-width: 768px) {
+			.hero__title {
+				font-size: 4.5rem;
+			}
+
+			.hero__subtitle {
+				font-size: 1.25rem;
+				font-weight: 400;
+			}
+
+			.hero__buttons {
+				flex-direction: column;
+				gap: 1rem;
+			}
+		}
 	}
 
 	@keyframes fade-in {

@@ -39,9 +39,9 @@
 		transition: background-color 0.2s, height 0.2s;
 
 		&.scrolled {
-			background-color: rgba(0, 0, 0, 0.8);
+			// background-color: rgba(0, 0, 0, 0.8);
 			border-bottom: 1px solid var(--color-border);
-			backdrop-filter: blur(10px);
+			backdrop-filter: blur(20px);
 			height: 3rem;
 		}
 

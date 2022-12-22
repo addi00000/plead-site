@@ -1,8 +1,31 @@
 <script lang="ts">
-	import commands from './commands.json';
+	import commandsData from './commands.json';
+	const commands = commandsData as Record<string, Record<string, { description: string }>>;
 
+	import Fa from 'svelte-fa';
+	import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+	import { onMount } from 'svelte';
 	import { blur } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	
+	onMount(() => {
+		const up = document.querySelector('.nav-arrows .up') as HTMLDivElement;
+		const down = document.querySelector('.nav-arrows .down') as HTMLDivElement;
+
+		up.addEventListener('mousedown', () => {
+			window.scrollBy({
+				top: -window.innerHeight,
+				behavior: 'smooth',
+			});
+		});
+
+		down.addEventListener('mousedown', () => {
+			window.scrollBy({
+				top: window.innerHeight,
+				behavior: 'smooth',
+			});
+		});
+	});
 </script>
 
 <main class="main" transition:blur={{ duration: 500, easing: cubicOut }}>
@@ -21,6 +44,14 @@
 				</div>
 			</div>
 		{/each}
+	</div>
+	<div class="nav-arrows">
+		<div class="up">
+			<Fa icon={faAngleUp} class="icon" />
+		</div>
+		<div class="down">
+			<Fa icon={faAngleDown} class="icon" />
+		</div>
 	</div>
 </main>
 
@@ -123,6 +154,58 @@
 				}
 			}
 		}
+
+		.nav-arrows {
+			position: fixed;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 5rem;
+			height: 100vh;
+			overflow: none;
+
+			.up,
+			.down {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 1rem;
+				height: 1rem;
+				padding: 0.5rem;
+				margin: 0.5rem 0;
+				overflow: none;
+				
+				background-color: var(--color-background-soft);
+				border-radius: 0.5rem;
+				
+				opacity: 0;
+				animation: fade-in-foward 1s ease forwards 0.25s;
+				
+				cursor: pointer;
+				transition: transform 0.2s ease;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+
+				&:active {
+					transform: scale(0.9) translateY(0.1rem);
+				}
+
+				.icon {
+					transition: transform 0.2s ease;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
 	}
 
 	@keyframes fade-in {
@@ -144,6 +227,15 @@
 		100% {
 			opacity: 1;
 			transform: translateX(0);
+		}
+	}
+
+	@keyframes fade-in-foward {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
 		}
 	}
 </style>
